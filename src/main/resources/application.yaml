@@ -1,3 +1,29 @@
 spring:
   application:
-    name: security
+    name: Spring Security
+  # Basic Authentication configuration
+  #  security:
+  #    user:
+  #      name: admin
+  #      password: admin123
+
+  #database configuration : PostgreSQL
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/security_app
+    username: postgres
+    password: postgre
+    driverClassName: org.postgresql.Driver
+
+  # Hibernate configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8081
+security:
+  enabled: false
+securityAdv:
+  enabled: false
